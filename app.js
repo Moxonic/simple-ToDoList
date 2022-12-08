@@ -7,7 +7,7 @@ var itemsAdded=['first item'];
 
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({extended: true})); //necesarry for post request 
-
+app.use(express.static(__dirname + "/public"));     //set  static folder for server to reach files 
 
 app.get('/', function (req, res) {
 
